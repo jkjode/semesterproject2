@@ -3,7 +3,7 @@
 // export async function getListing(id) {}
 
 import { authFetch } from "../authFetch.mjs";
-import { API_SOCIAL_URL } from "../../api/constants.mjs";
+import { API_AUCTION_URL } from "../../api/constants.mjs";
 
 const action = "/listings";
 
@@ -14,8 +14,8 @@ const action = "/listings";
  * @returns listings filtered or sorted
  */
 
-export async function getListing(tag, sortType) {
-  const getListingsURL = `${API_SOCIAL_URL}${action}?_author=true${tag ? `&_tag=${tag}` : ""}${
+export async function getListings(tag, sortType) {
+  const getListingsURL = `${API_AUCTION_URL}${action}?_author=true${tag ? `&_tag=${tag}` : ""}${
     sortType ? `&sort=created&sortOrder=${sortType}` : ""
   }`;
 
@@ -35,7 +35,7 @@ export async function getListing(id) {
     throw new Error("Get requires a listingID");
   }
 
-  const getListingURL = `${API_SOCIAL_URL}${action}/${id}`;
+  const getListingURL = `${API_AUCTION_URL}${action}/${id}`;
 
   const response = await authFetch(getListingURL);
 

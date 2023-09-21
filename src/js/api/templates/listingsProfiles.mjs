@@ -1,4 +1,4 @@
-import * as listingMethods from "../api/listings/index.mjs";
+import * as listingMethods from "../listing/index.mjs";
 
 /**
  * Generates the HTML template for rendering a single listing.

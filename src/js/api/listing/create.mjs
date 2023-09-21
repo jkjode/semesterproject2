@@ -1,6 +1,6 @@
 import { authFetch } from "../authFetch.mjs";
-import { API_SOCIAL_URL } from "../../api/constants.mjs";
-import { load } from "../../storage/index.mjs";
+import { API_AUCTION_URL } from "../../api/constants.mjs";
+// import { load } from "../../storage/index.mjs";
 
 const action = "/listings";
 const method = "listing";
@@ -12,7 +12,7 @@ const method = "listing";
  */
 
 export async function createListing(listingData) {
-  const createListingURL = API_SOCIAL_URL + action;
+  const createListingURL = API_AUCTION_URL + action;
 
   const response = await authFetch(createListingURL, {
     method,

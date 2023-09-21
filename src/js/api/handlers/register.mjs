@@ -1,4 +1,4 @@
-import { register } from "../api/auth/register.mjs";
+import { register } from "../auth/register.mjs";
 
 /**
  * @description Sets up a submit event listener for the register form and handles the register process.

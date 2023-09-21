@@ -1,5 +1,5 @@
 import { authFetch } from "../authFetch.mjs";
-import { API_SOCIAL_URL } from "../../api/constants.mjs";
+import { API_AUCTION_URL } from "../../api/constants.mjs";
 
 const action = "/listings";
 const method = "put";
@@ -15,7 +15,7 @@ export async function updateListing(listingData) {
     throw new Error("Listing ID is required");
   }
 
-  const updateListingURL = `${API_SOCIAL_URL}${action}/${listingData.id}`;
+  const updateListingURL = `${API_AUCTION_URL}${action}/${listingData.id}`;
 
   const response = await authFetch(updateListingURL, {
     method,

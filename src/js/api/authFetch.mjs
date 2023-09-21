@@ -1,4 +1,4 @@
-import { load } from "../storage/index.mjs";
+import { load } from "./storage/index.mjs";
 
 /**
  * @description This function returns the headers object for an authenticated request.

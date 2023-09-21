@@ -1,4 +1,4 @@
-import * as listingMethods from "../api/listings/index.mjs";
+import * as listingMethods from "../listing/index.mjs";
 import * as templates from "../templates/index.mjs";
 
 /**

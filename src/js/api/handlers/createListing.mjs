@@ -1,4 +1,4 @@
-import { createListing } from "../api/listings/index.mjs";
+import { createListing } from "../listing/create.mjs";
 
 export function setCreateListingListener() {
   const form = document.querySelector("#createListing");

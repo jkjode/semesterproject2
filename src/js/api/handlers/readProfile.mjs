@@ -1,5 +1,5 @@
 import * as storage from "../storage/index.mjs";
-import * as profileMethods from "../api/profiles/index.mjs";
+import * as profileMethods from "../profiles/index.mjs";
 import * as templates from "../templates/index.mjs";
 
 /**

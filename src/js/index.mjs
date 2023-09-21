@@ -1,6 +1,6 @@
-import * as listingMethods from "./api/listing/index.mjs";
-import * as templates from "./api/templates/index.mjs";
-import * as listeners from "./api/handlers/index.mjs";
+import * as listingMethods from "../js/api/listing/index.mjs";
+import * as templates from "../js/api/templates/index.mjs";
+import * as listeners from "../js/api/handlers/index.mjs";
 
 const path = location.pathname;
 
@@ -25,8 +25,10 @@ if (path === "/profile/login/") {
 } else if (path === "/feed/") {
   async function testTemplate() {
     const listings = await listingMethods.getListings();
+    console.log({ listings })
     const container = document.querySelector("#listings");
     templates.renderListingTemplates(listings, container);
+    console.log({ container })
   }
   testTemplate();
   listeners.setSearchAndFilterListener();

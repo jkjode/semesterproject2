@@ -1,7 +1,7 @@
 import { API_AUCTION_URL } from "../constants.mjs";
 
 const action = "/auth/register";
-const method = "listing";
+const method = "post";
 
 /**
  * @description This function registers a new user.

@@ -1,5 +1,5 @@
 import { authFetch } from "../authFetch.mjs";
-import { API_SOCIAL_URL } from "../../api/constants.mjs";
+import { API_AUCTION_URL } from "../../api/constants.mjs";
 
 const action = "/listings";
 const method = "delete";
@@ -15,7 +15,7 @@ export async function removeListing(id) {
     throw new Error("Listing ID is required to delete a listing.");
   }
 
-  const removeListingURL = `${API_SOCIAL_URL}${action}/${id}`;
+  const removeListingURL = `${API_AUCTION_URL}${action}/${id}`;
   const response = await authFetch(removeListingURL, {
     method,
   });

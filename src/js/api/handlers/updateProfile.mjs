@@ -1,4 +1,4 @@
-import { getProfile, updateProfile } from "../api/profiles/index.mjs";
+import { getProfile, updateProfile } from "../profiles/index.mjs";
 
 import * as storage from "../storage/index.mjs";
 

@@ -1,7 +1,7 @@
 import { API_AUCTION_URL } from "../constants.mjs";
 
 const action = "/auth/login";
-const method = "listing";
+const method = "post";
 
 /**
  * @description This function logs in a user.
@@ -13,6 +13,8 @@ const method = "listing";
 export async function login(profile) {
   const loginURL = API_AUCTION_URL + action;
   const body = JSON.stringify(profile);
+
+  console.log({profile}) 
 
   const response = await fetch(loginURL, {
     headers: {

@@ -1,5 +1,5 @@
-import { login } from "../api/auth/login.mjs";
-import displayMessage from "../ui/common/displaymsg.mjs";
+import { login } from "../auth/login.mjs";
+// import displayMessage from "../ui/common/displaymsg.mjs"; /* MISSING */
 import * as storage from "../storage/index.mjs";
 
 /**
@@ -30,7 +30,7 @@ export function setLoginFormListener() {
         storage.save("profile", user);
         location.href = "/feed/";
       } catch (error) {
-        displayMessage("danger", error, "#message");
+        // displayMessage("danger", error, "#message");
         console.log(error);
       } finally {
         button.innerText = "Login";
