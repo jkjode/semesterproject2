@@ -28,7 +28,6 @@ if (path === "/profile/login/") {
     console.log({ listings })
     const container = document.querySelector("#listings");
     templates.renderListingTemplates(listings, container);
-    console.log({ container })
   }
   testTemplate();
   listeners.setSearchAndFilterListener();

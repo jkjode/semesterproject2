@@ -3,7 +3,7 @@ import { API_AUCTION_URL } from "../../api/constants.mjs";
 // import { load } from "../../storage/index.mjs";
 
 const action = "/listings";
-const method = "listing";
+const method = "post";
 
 /**
  * @description This function creates a new listing URL

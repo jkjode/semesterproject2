@@ -28,7 +28,7 @@ export function setSearchAndFilterListener() {
   
       // send to API
       const returnedListings = await listingMethods.getListings("", sortType);
-          const container = document.querySelector("#Listings");
+          const container = document.querySelector("#listings");
       templates.renderListingTemplates(returnedListings, container);
     });
   }
@@ -36,7 +36,7 @@ export function setSearchAndFilterListener() {
   export function setFilterByTagListener() {
     const form = document.querySelector("#filterByTagForm");
   
-    const container = document.querySelector("#Listings");
+    const container = document.querySelector("#listings");
 
     if (!form || !container) {
       return;

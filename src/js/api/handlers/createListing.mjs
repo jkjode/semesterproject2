@@ -19,6 +19,7 @@ export function setCreateListingListener() {
       listing.tags = [];
       // Send data to the API
       createListing(listing);
+      console.log(listing);
     });
   }
 }

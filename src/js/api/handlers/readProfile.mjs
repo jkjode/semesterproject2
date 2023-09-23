@@ -9,11 +9,17 @@ import * as templates from "../templates/index.mjs";
 export async function setViewProfileListener() {
   const profile = storage.load("profile");
   console.log(profile);
-  const profileData = await profileMethods.getProfile(profile.name);
+  const profileData = await profileMethods.getProfile(profile.name, profile.email, profile.credits);
 
   const listingsContainer = document.querySelector("#listings");
   const profileTitle = document.querySelector("#profileName");
+  const profileDetails = document.querySelector("#profileDetails");
 
   profileTitle.innerHTML = profileData.name;
   templates.renderProfileListingsTemplates(profileData.listings, listingsContainer);
+
+  // profileDetails.innerHTML = profileData.email, profileData.credits;
+  // templates.renderProfileListingsTemplates(profileData.listings, profileEmail);
+
+  console.log(profileData);
 }
