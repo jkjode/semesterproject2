@@ -14,7 +14,7 @@ export async function getProfile(name) {
     throw new Error("Get requires a name");
   }
 
-  const getProfileURL = `${API_AUCTION_URL}${action}/${name}?_posts=true`;
+  const getProfileURL = `${API_AUCTION_URL}${action}/${name}?_listings=true`;
 
   const response = await authFetch(getProfileURL);
 

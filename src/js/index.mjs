@@ -37,6 +37,7 @@ if (path === "/profile/login/") {
   const listing = await listingMethods.getListing(id);
   const container = document.querySelector("#listing");
   templates.renderOneListingTemplate(listing, container);
+  listeners.setBiddingListener();
 } else if (path === "/profile/") {
   listeners.setViewProfileListener();
 }

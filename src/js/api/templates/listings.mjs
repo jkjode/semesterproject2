@@ -26,7 +26,7 @@ export function listingTemplateB(listingData) {
   listing.append(listingTitle);
 
   const listingBody = document.createElement("p");
-  listingBody.innerText = listingData.body;
+  listingBody.innerText = listingData.description;
   listing.append(listingBody);
 
   if (listingData.media) {

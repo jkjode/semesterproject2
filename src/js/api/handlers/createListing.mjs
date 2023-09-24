@@ -16,10 +16,14 @@ export function setCreateListingListener() {
       const listing = Object.fromEntries(formData.entries());
       //   const action = form.action;
       //   const method = form.method;
-      listing.tags = [];
+      listing.description = [listing.description];
+      listing.tags = [listing.tags];
+      listing.media = [listing.media];
       // Send data to the API
       createListing(listing);
       console.log(listing);
+      console.log(formData);
+      console.log(form);
     });
   }
 }

@@ -7,3 +7,4 @@ export * from "./listingsSearchAndFilter.mjs";
 export * from "./readProfile.mjs";
 export * from "./checkIfLoggedIn.mjs";
 export * from "./logoutHandler.mjs";
+export * from "./biddingHandler.mjs";

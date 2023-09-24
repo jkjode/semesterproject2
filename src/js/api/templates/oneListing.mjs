@@ -20,9 +20,9 @@ export function listingTemplateC(listingData) {
     listing.innerText = listingData.title;
   
     const listingBody = document.createElement("p");
-    listingBody.innerText = listingData.body;
+    listingBody.innerText = listingData.description;
     listing.append(listingBody);
-  
+
     if (listingData.media) {
       const img = document.createElement("img");
       img.src = listingData.media;
@@ -46,6 +46,17 @@ export function listingTemplateC(listingData) {
         });
         listing.append(tags);
       }
+
+      const listingBids = document.createElement("div");
+      listingData.bids.forEach((bid) => {  
+        const bidElement = document.createElement("div");
+        const bidText = document.createElement("p");
+        bidText.innerHTML = `Bid: ${bid.amount} `;
+        bidText.innerHTML += `Bidder: ${bid.bidderName}`;
+        bidElement.append(bidText);
+        listingBids.append(bidElement);
+      });
+      listing.append(listingBids);
 
     return listing;
   }
